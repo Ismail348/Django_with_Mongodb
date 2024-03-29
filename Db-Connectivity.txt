@@ -1,0 +1,24 @@
+pip install djongo
+pip install dnspython
+pip install pymongo==3.12.3
+You had to install these packages first 
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'NAME': 'Edu-Dynamo', #Your Database Name
+        'ENFORCE_SCHEMA': False,
+        'CLIENT': {
+            'host': 'localhost:27017',
+            'port': 27017,
+            # 'username': 'your_mongodb_username',
+            # 'password': 'your_mongodb_password',
+            # 'authSource': 'your_mongodb_auth_database',
+        }
+    }
+}
+paste this code in your setting.py file
+than migrate
+python manage.py migrate
+Run your server
+python manage.py runserver
